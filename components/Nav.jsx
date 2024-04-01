@@ -22,8 +22,8 @@ const Nav = () => {
     }, [])
 
     return (
-        <nav className='navbar navbar-expand-lg z-index-3 py-3 bg-gradient-primary navbar-primary'>
-     {  /* <nav className='flex-between w-full mb-16 pt-3'> */}
+        <nav className='flex-between w-full mb-16 bg-blue-950 p-3'>
+     {  /* <nav className=' navbar navbar-expand-lg z-index-3 py-3 bg-gradient-primary navbar-primary'> */}
           <Link href='/' className='flex gap-2 flex-center'>
             <Image
               src='/assets/images/ETECServicesLogoNoBoxwhitesm.png'
@@ -46,7 +46,7 @@ const Nav = () => {
                         View Tickets
                     </Link>
 
-                    <button type='button' onClick={signOut} className='outline_btn'>
+                    <button type='button' onClick={signOut} className='black_btn'>
                         Sign Out
                     </button>
 

@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import Feed from '@components/Feed';
+import TicketFeed from '@components/TicketFeed';
 
 const Home = () => {
   return (
@@ -16,7 +18,18 @@ const Home = () => {
           provide assistance to resolve any issues related to Kamstrup’s software, infrastructure, 
           or devices.
         </p>
+        <div className='sm:flex hidden'>
+          <div className='flex gap-3 md:gap-5 p-5'>
+            <Link href='/create-ticket' className='black_btn'>
+              Create Ticket
+            </Link>
 
+            <Link href='/profile' className='black_btn'>
+              View Tickets
+            </Link>
+          </div>
+        </div>
+        <TicketFeed />
         <Feed />        
     </section>
   )

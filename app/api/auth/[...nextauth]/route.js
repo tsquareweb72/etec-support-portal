@@ -22,6 +22,18 @@ const handler = NextAuth({
 
         return session;
     },
+// Begin ticketsession   Not sure if ticketsession is needed
+    async ticketsession({ ticketsession }) {
+        // store the user id from MongoDB to ticketsession
+        const ticketsessionUser = await User.findOne({
+            email: ticketsession.user.email
+        })
+
+        ticketsession.user.id = ticketsessionUser._id.toString();
+
+        return ticketsession;
+    },
+// End ticketsession
     async signIn({ profile }) {
         try{
             await connectToDB();

@@ -37,8 +37,14 @@ const Nav = () => {
 {alert(providers)}*/}
           {/* Desktop Navigation */}
           <div className='sm:flex hidden'>
+            <div className='px-8 flex gap-3 md:gap-5'>
+                <Link href='https://my.splashtop.com/sos/packages/download/KK37JYX52AL5' className='blue_btn'>
+                    Remote Support
+                </Link>
+            </div>
             {session?.user ? (
                 <div className='flex gap-3 md:gap-5'>
+<<<<<<< Updated upstream
                     <Link href='/create-prompt' className='black_btn'>
                         Create Ticket
                     </Link>
@@ -52,13 +58,66 @@ const Nav = () => {
 
                     <Link href='/profile'>
                         <Image 
+=======
+                    <Image
+>>>>>>> Stashed changes
                         src={session?.user.image}
                         width={37}
                         height={37}
                         className='rounded-full'
                         alt='profile'
-                        />
-                    </Link>
+                        onClick={() => setToggleDropdown((prev) => !prev)}
+                    />
+                    {toggleDropdown && (
+                        <div className='dropdown_full'>
+                            <Link
+                                href='/profile'
+                                className='dropdown_link'
+                                onClick={() => setToggleDropdown (false)}
+                                >
+                                {session?.user.name}'s Profile
+                                <br/> {session?.user.email}
+                            </Link>
+                            <Link
+                                href='/create-ticket'
+                                className='dropdown_link'
+                                onClick={() => setToggleDropdown (false)}
+                                >
+                                Create Ticket
+                            </Link>
+                            <Link
+                                href='/create-prompt'
+                                className='dropdown_link'
+                                onClick={() => setToggleDropdown (false)}
+                                >
+                                Create Prompt
+                            </Link>
+                            <Link
+                                href='/create-contact'
+                                className='dropdown_link'
+                                onClick={() => setToggleDropdown (false)}
+                                >
+                                Create Contact
+                            </Link>
+                            <Link
+                                href='/tickets'
+                                className='dropdown_link'
+                                onClick={() => setToggleDropdown (false)}
+                                >
+                                My Tickets
+                            </Link>
+                            <button
+                                type='button'
+                                onClick={() => {
+                                    setToggleDropdown(false);
+                                    signOut();
+                                }}
+                                className='mt-5 w-full black_btn'
+                            >
+                                Sign Out
+                            </button>
+                        </div>
+                    )}
                 </div>
             ): (
                 <>

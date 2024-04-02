@@ -80,6 +80,9 @@
 .black_btn {
   @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
 }
+.blue_btn {
+  @apply rounded-full border border-black bg-blue-500 py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
+}
 
 .outline_btn {
   @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-inter flex items-center justify-center;
@@ -120,6 +123,9 @@
 .prompt_layout {
   @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3;
 }
+.ticket_layout {
+  @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3;
+}
 
 /* Feed Component */
 .feed {
@@ -147,8 +153,19 @@
 .dropdown_link {
   @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
 }
+.dropdown_full {
+  @apply absolute right-0 top-16 end-16 p-5 mt-3 z-10 mt-2 w-64 origin-top-right rounded-lg bg-white shadow-lg flex flex-col gap-2 justify-end items-end;
+}
 
-/* PromptCard Component */
+.dropdown_link_full {
+  @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
+}
+
+/* PromptCard / TicketCard Component */
+.ticket_card {
+  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
+}
+
 .prompt_card {
   @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
 }
@@ -168,6 +185,7 @@
 .flex-between {
   @apply flex justify-between items-center;
 }
+<<<<<<< Updated upstream
 
 /* theme from Creative Tim Builder */
 /*!
@@ -26798,3 +26816,8 @@ pre[class*="language-"] {
 }
 
 /*# sourceMappingURL=kit-free.css.map */
+=======
+.bg-gradient-primary {
+  background-image: linear-gradient(310deg, var(--bs-gradient-primary-right) 0%, var(--bs-gradient-primary-left) 100%);
+}
+>>>>>>> Stashed changes

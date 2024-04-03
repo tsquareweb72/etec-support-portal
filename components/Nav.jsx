@@ -22,8 +22,8 @@ const Nav = () => {
     }, [])
 
     return (
-        <nav className='navbar navbar-expand-lg z-index-3 py-3 bg-gradient-primary navbar-primary'>
-     {  /* <nav className='flex-between w-full mb-16 pt-3'> */}
+        <nav className='flex-between w-full mb-16 bg-blue-950 rounded-b-lg p-3'>
+     {  /* <nav className=' navbar navbar-expand-lg z-index-3 py-3 bg-gradient-primary navbar-primary'> */}
           <Link href='/' className='flex gap-2 flex-center'>
             <Image
               src='/assets/images/ETECServicesLogoNoBoxwhitesm.png'
@@ -44,23 +44,7 @@ const Nav = () => {
             </div>
             {session?.user ? (
                 <div className='flex gap-3 md:gap-5'>
-<<<<<<< Updated upstream
-                    <Link href='/create-prompt' className='black_btn'>
-                        Create Ticket
-                    </Link>
-                    <Link href='/profile' className='black_btn'>
-                        View Tickets
-                    </Link>
-
-                    <button type='button' onClick={signOut} className='outline_btn'>
-                        Sign Out
-                    </button>
-
-                    <Link href='/profile'>
-                        <Image 
-=======
                     <Image
->>>>>>> Stashed changes
                         src={session?.user.image}
                         width={37}
                         height={37}
